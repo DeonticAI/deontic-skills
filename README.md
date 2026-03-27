@@ -19,3 +19,11 @@ The skills in this repository tell Claude how to interact with Deontic's MCP ser
 
 4. Test:
 - Ask Claude: "Create a scenario with a car driving on a one-lane road."
+
+## Skills
+
+### deontic-scenario-generator
+Deontic generates the OpenDRIVE and OpenSCENARIO files for a single scenario.
+
+### deontic-odd-scenario-generator
+Takes an ODD description and a scenario prompt as input. Deontic suggests attributes for a range of scenarios inside of the ODD description and presents them to the user. After approval, Deontic generates the OpenDRIVE and OpenSCENARIO files for each scenario one by one.  
