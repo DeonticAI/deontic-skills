@@ -32,6 +32,10 @@ The skills in this repository tell Claude how to interact with Deontic's MCP ser
   1. Suggests the attributes for each scenario, and asks the user to approve or correct these.
   2. Creates the OpenDRIVE and OpenSCENARIO files for each scenario and displays the download links.
 
+## deontic-scenario-for-opendrive
+- Triggers when the user wants to create a scenario for an existing OpenDRIVE file.
+- Uploads the OpenDRIVE file to Deontic, creates a matching OpenSCENARIO file and displays the download link.
+
 ### deontic-scenario-editor
 - Triggers when a user gives feedback on a previously created scenario. Feedback can target the road (e.g. "add another right driving lane"), the scene (e.g. "add a slower car 50m in front of Ego") or the weather conditions (e.g. "add thick fog").
 - Edits the scenario based on user feedback.
