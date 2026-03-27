@@ -40,30 +40,41 @@ If the user has not provided a scenario prompt, ask for one before proceeding.
 
 ---
 
-### Step 2 — Generate the Scenario
+### Step 2 — Generate the OpenDRIVE file
 
-Call `Deontic:generate_scenario` with:
+Call `Deontic:generate_road_network` with:
 - `scenario_prompt`: the scenario prompt
 - `scenario_constraints`: the additional constraints (if any; omit or pass empty string if none)
+- `odd`: the optional ODD definition
 
 ---
 
-### Step 3 — Display Results
+### Step 3 — Generate the OpenSCENARIO file
 
-From the response, present the following to the user:
+Call `Deontic:generate_open_scenario` with:
+- `scenario_prompt`: the scenario prompt
+- `road_network_id`: the road network ID, returned by the previous step
+- `scenario_constraints`: the additional constraints (if any; omit or pass empty string if none)
+- `odd`: the optional ODD definition
 
-1. **Road Network Description**: Show the `road_network_description` field from the response.
-2. **Scene Description**: Show the `scene_description` field from the response.
+---
+
+### Step 4 — Display Results
+
+From the responses, present the following to the user:
+
+1. **Road Network Description**: Show the `road_network_description` field from the response in Step 2.
+2. **Scene Description**: Show the `scene_description` field from the response in Step 3.
 
 Format these clearly with headers so the user can review the generated scenario.
 
 ---
 
-### Step 4 — Provide File Downloads
+### Step 5 — Provide File Downloads
 
 The response contains download URLs for two files:
-- `open_drive_download_url` — the OpenDRIVE (.xodr) file
-- `open_scenario_download_url` — the OpenSCENARIO (.xosc) file
+- `open_drive_download_url` — the OpenDRIVE (.xodr) file from Step 2
+- `open_scenario_download_url` — the OpenSCENARIO (.xosc) file from Step 3
 
 Present the download links to the user.
 
