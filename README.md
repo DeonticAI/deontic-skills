@@ -27,12 +27,10 @@ The skills in this repository tell Claude how to interact with Deontic's MCP ser
 - Creates the OpenDRIVE and OpenSCENARIO files for this scenario and displays the download links.
 
 ### deontic-odd-scenario-generator
-- Triggesr when the user asks to create a set of scenarios for a specific Operational Design Domain (ODD).
+- Triggers when the user asks to create a set of scenarios for a specific Operational Design Domain (ODD).
 - The workflow proceeds in two steps:
   1. Suggests the attributes for each scenario, and asks the user to approve or correct these.
   2. Creates the OpenDRIVE and OpenSCENARIO files for each scenario and displays the download links.
-
-Takes an ODD description and a scenario prompt as input. Deontic suggests attributes for a range of scenarios inside of the ODD description and presents them to the user. After approval, Deontic generates the OpenDRIVE and OpenSCENARIO files for each scenario one by one.  
 
 ### deontic-scenario-editor
 - Triggers when a user gives feedback on a previously created scenario. Feedback can target the road (e.g. "add another right driving lane"), the scene (e.g. "add a slower car 50m in front of Ego") or the weather conditions (e.g. "add thick fog").
