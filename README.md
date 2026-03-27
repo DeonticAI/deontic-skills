@@ -1,6 +1,6 @@
 # Deontic Skills
 
-The skills in this repository tell Claude how to interact with Deontic's MCP server for the automatic generation of test scenarios for ADAS and autonomous vehicles.
+Equip your agent to generate, update and visualize driving scenarios in OpenDRIVE and OpenSCENARIO format with Deontic's MCP server.
 
 ## Installation
 
@@ -32,7 +32,7 @@ The skills in this repository tell Claude how to interact with Deontic's MCP ser
   1. Suggests the attributes for each scenario, and asks the user to approve or correct these.
   2. Creates the OpenDRIVE and OpenSCENARIO files for each scenario and displays the download links.
 
-## deontic-scenario-for-opendrive
+### deontic-scenario-for-opendrive
 - Triggers when the user wants to create a scenario for an existing OpenDRIVE file.
 - Uploads the OpenDRIVE file to Deontic, creates a matching OpenSCENARIO file and displays the download link.
 
