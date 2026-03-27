@@ -34,11 +34,11 @@ The skills in this repository tell Claude how to interact with Deontic's MCP ser
 
 Takes an ODD description and a scenario prompt as input. Deontic suggests attributes for a range of scenarios inside of the ODD description and presents them to the user. After approval, Deontic generates the OpenDRIVE and OpenSCENARIO files for each scenario one by one.  
 
-## deontic-scenario-editor
+### deontic-scenario-editor
 - Triggers when a user gives feedback on a previously created scenario. Feedback can target the road (e.g. "add another right driving lane"), the scene (e.g. "add a slower car 50m in front of Ego") or the weather conditions (e.g. "add thick fog").
 - Edits the scenario based on user feedback.
 
-## deontic-video-creator
+### deontic-video-creator
 - Triggers when the user asks for a video of a previously created scenario.
 - Creates the video and shows a download link.
 
