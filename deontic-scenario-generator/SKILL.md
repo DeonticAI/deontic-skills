@@ -42,7 +42,7 @@ If the user has not provided a scenario prompt, ask for one before proceeding.
 
 ### Step 2 — Generate the OpenDRIVE file
 
-Call `Deontic:generate_road_network` with:
+Call `Deontic:generate_open_drive` with:
 - `scenario_prompt`: the scenario prompt
 - `scenario_constraints`: the additional constraints (if any; omit or pass empty string if none)
 - `odd`: the optional ODD definition

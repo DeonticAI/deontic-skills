@@ -70,14 +70,20 @@ Wait for explicit approval. Allow the user to:
 
 Generate the scenarios one by one (not in parallel). For each **approved** attribute combination:
 
-**4.1 — Call `generate-scenario`**
-```
-scenario_prompt: <the scenario prompt>
-scenario_constraints: <attributes joined by "; ">
-odd: <ODD content>
-```
+**4.1 — Call `Deontic:generate_open_drive`**
 
-**4.2 — Create output subdirectory**
+- `scenario_prompt`: the scenario prompt
+- `scenario_constraints`: the additional constraints (if any; omit or pass empty string if none)
+- `odd`: the ODD definition
+
+**4.2 — Call `Deontic:generate_open_scenario`**
+
+- `scenario_prompt`: the scenario prompt
+- `road_network_id`: the road network ID, returned by the previous step
+- `scenario_constraints`: the additional constraints (if any; omit or pass empty string if none)
+- `odd`: the ODD definition
+
+**4.3 — Create output subdirectory**
 
 Name the subdirectory using the scenario number and attribute labels:
 ```
@@ -85,7 +91,7 @@ Name the subdirectory using the scenario number and attribute labels:
 ```
 Where `N` is a zero-padded index (01, 02, ...) and the slug replaces spaces/special chars with underscores.
 
-**4.3 — Save scenario.md**
+**4.4 — Save scenario.md**
 
 Write a `scenario.md` file to the subdirectory containing:
 ```markdown
@@ -98,13 +104,13 @@ Write a `scenario.md` file to the subdirectory containing:
 {scene_description from API response}
 ```
 
-**4.4 — Download OpenDRIVE file**
+**4.5 — Download OpenDRIVE file**
 
 Download the file from the `open_drive` URL in the response. Keep the original filename from the URL. Save to the scenario subdirectory.
 
-**4.5 — Download OpenSCENARIO file**
+**4.6 — Download OpenSCENARIO file**
 
-Download the file from the `open_scenario` URL in the response. Keep the original filename from the URL. Save to the scenario subdirectory.
+Downl oad the file from the `open_scenario` URL in the response. Keep the original filename from the URL. Save to the scenario subdirectory.
 
 ---
 
